@@ -24,7 +24,7 @@ Prerequisites
 -------------
 - Python 3.9 or newer.
 - Internet access (Wikipedia API, NewsAPI, gensim model downloads).
-- A NewsAPI key stored in a local `.env` file (see **Environment Variables**).
+- A NewsAPI key stored in a local `.env` file (see **Environment Variables**). For now, there have been attached the env file with API KEY
 
 Recommended Python packages (install with `pip install ...`):
 
