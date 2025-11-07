@@ -1,5 +1,3 @@
-Environmental Keyword Similarity Toolkit
-=======================================
 
 Overview
 --------
@@ -34,8 +32,6 @@ Recommended Python packages (install with `pip install ...`):
 pip install wikipedia-api nltk scikit-learn pandas numpy matplotlib seaborn requests beautifulsoup4 python-dotenv wordcloud gensim jupyter
 ```
 
-> **Note:** `task9_news.py` expects a function `preprocess` in `task2_tfidf.py`. Ensure that module is present (or adjust the import) when you run the news workflow.
-
 NLTK Resources
 --------------
 Several preprocessing steps depend on NLTK tokenizers, stop words, and WordNet data. Run once before executing the notebook:
@@ -47,6 +43,7 @@ python -m nltk.downloader punkt stopwords wordnet omw-1.4
 Environment Variables
 ---------------------
 Create a `.env` file in the project root containing your NewsAPI credentials:
+(For now, there is the env file with my api key)
 
 ```
 NEWSAPI_KEY=your_newsapi_key_here
@@ -63,7 +60,7 @@ Running the Notebook
    - **Task 6 – Entity Expansion**: Scrapes the first 30 linked entities per keyword, collects categories and summaries, and saves the expanded corpora (`expanded_entity_data.pkl`, `expanded_corpus.json`). Scraping respects a 0.5 s delay between requests; adjust `max_entities_per_keyword` or `delay` if needed.
    - **Task 7 – Expanded Entity Similarity**: Evaluates the expanded representations and stores heatmaps plus CSV matrices for categories, summaries, and linked-entity signals.
    - **Task 8 – Word2Vec Embeddings**: Downloads `glove-wiki-gigaword-100` via `gensim`, derives embeddings for each keyword, and outputs `similarity_matrix_word2vec.csv` along with a PCA scatter plot.
-   - **Task 9 – News Similarity**: Delegates to `task9_news.py` to fetch recent news articles, build word clouds, and compute TF-IDF and Word2Vec similarities across rolling monthly windows. Requires a valid `NEWSAPI_KEY` and the `task2_tfidf.preprocess` helper.
+   - **Task 9 – News Similarity**: Delegates to `task9_news.py` to fetch recent news articles, build word clouds, and compute TF-IDF and Word2Vec similarities across rolling monthly windows. 
 
 Running Task 9 from the Command Line
 ------------------------------------
